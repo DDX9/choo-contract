@@ -1,3 +1,8 @@
+# Quick Command
+1. to deploy contract on zksyc network
+``` npx hardhat deploy-zksync --script deployCheckInAnnounce.ts --network zkCandySepoliaTestnet ```
+
+
 # zkCandy deployment guide
 1. run the following command to deploy contract by specifying network 
 ```npx hardhat clean && npx hardhat compile && npx hardhat deploy-zksync --network zkCandySepoliaTestnet --script deployCheckInAnnounce.ts --show-stack-traces```
