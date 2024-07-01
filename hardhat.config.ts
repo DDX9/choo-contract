@@ -1,6 +1,6 @@
-import { HardhatUserConfig } from "hardhat/config";
-
+import "@nomiclabs/hardhat-ethers";
 import "@matterlabs/hardhat-zksync";
+import { HardhatUserConfig } from "hardhat/config";
 
 const config: HardhatUserConfig = {
   defaultNetwork: "zkSyncSepoliaTestnet",
@@ -11,6 +11,7 @@ const config: HardhatUserConfig = {
       zksync: true,
       verifyURL:
         "https://sepolia.contract-verifier.zkcandy.io/contract_verification",
+      chainId: 302,
     },
     zkSyncSepoliaTestnet: {
       url: "https://sepolia.era.zksync.dev",
@@ -18,6 +19,7 @@ const config: HardhatUserConfig = {
       zksync: true,
       verifyURL:
         "https://explorer.sepolia.era.zksync.dev/contract_verification",
+      chainId: 301,
     },
     zkSyncMainnet: {
       url: "https://mainnet.era.zksync.io",
