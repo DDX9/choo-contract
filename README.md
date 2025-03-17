@@ -1,11 +1,35 @@
 # Quick Command
 1. to deploy contract on zksyc network
-``` yarn hardhat deploy-zksync --script deployCheckInAnnounce.ts --network zkCandySepoliaTestnet ```
+``` yarn hardhat compile && yarn hardhat deploy-zksync --script deployCheckInAnnounce.ts --network zkCandySepoliaTestnet ```
+2. the deployment will auto verify the contract as well
 
 
 # zkCandy deployment guide
 1. run the following command to deploy contract by specifying network 
 ```yarn hardhat clean && npx hardhat compile && npx hardhat deploy-zksync --network zkCandySepoliaTestnet --script deployCheckInAnnounce.ts --show-stack-traces```
+
+## Contract Address
+### Check In
+### Staging
+    6th Jan 2025:  0x8C6285D426f09C4211245D1F54e6eF54BE791DE0 (https://sepolia.explorer.zkcandy.io/address/0x8C6285D426f09C4211245D1F54e6eF54BE791DE0#contract)
+### Production testnet
+    6th Jan 2025: 0x44f5663030fE1b671fe540a2Ba5de309aae4b2AF (https://sepolia.explorer.zkcandy.io/address/0x44f5663030fE1b671fe540a2Ba5de309aae4b2AF#contract)
+
+
+## hardhat console command
+### send transaction
+```
+let signer = await ethers.getSigners()
+let me = signer[0]
+me.sendTransaction({to:<xxx>,values:<xxx>})
+```
+
+### contract interaction
+```
+const contract  = hre.ethers.getContractAt(<contract name>,<address>)
+await contract.checkin()
+```
+
 
 
 # ZKsync Hardhat project template
@@ -59,9 +83,3 @@ Important: ZKsync In-memory Node currently supports only the L2 node. If contrac
 ## License
 
 This project is under the [MIT](./LICENSE) license.
-
-
-## Contract Address
-### Check In
-### Staging
-    6th Jan 2025:  0x2fEeAEECb37bAB1004F357D93314086D12692da8
