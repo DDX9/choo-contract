@@ -7,6 +7,15 @@ dotenv.config();
 const config: HardhatUserConfig = {
   defaultNetwork: "zkCandySepoliaTestnet",
   networks: {
+    zkCandyMainnet: {
+      url: "https://rpc.zkcandy.io",
+      ethNetwork: "mainnet",
+      zksync: true,
+      verifyURL: "https://contracts.zkcandy.io/contract_verification",
+      accounts: process.env.WALLET_PRIVATE_KEY
+        ? [process.env.WALLET_PRIVATE_KEY]
+        : [],
+    },
     zkCandySepoliaTestnet: {
       url: "https://sepolia.rpc.zkcandy.io",
       ethNetwork: "sepolia",
