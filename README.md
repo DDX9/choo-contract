@@ -1,3 +1,27 @@
+# Wallets
+Choo choo spirits contract utilise Hot & Cold Wallet to manage contract ownership due to inflexibility of zkSync custom library to support hardware wallet signing
+
+trezor passphrase and hot wallet private keys on separated google sheet instead.
+
+## Staging Hardware wallets (Trezor Enginner)
+Staging cold wallet address: 0x6827633c5357C04fCB51Ee82EeE31dc3F690a04D
+### Hot wallet ( Contract holder )
+Address: 0x678F9929c9f855D911Cb87CeF1069e56EAdb0065
+## Production Hardware wallets (Trezor Enginner)
+Production cold wallet address: 0x30c3CED08A27e7Ba1A7c6593a633522C327FCaab
+### Hot wallet ( Contract holder )
+Address: 0xCD08b7A911e6656912d7c5250472bD344945b14f
+
+# Contract Address
+## Check In
+### Staging
+    20th Mar 2025:  0xBB34dae6b5a68AaA89F5617ADdB4b966389f8331
+### Production
+    20th Mar 2025: 0x44f5663030fE1b671fe540a2Ba5de309aae4b2AF
+
+
+Production:
+
 # Quick Command
 1. to deploy contract on zksyc network
 ``` yarn hardhat compile && yarn hardhat deploy-zksync --script deployCheckInAnnounce.ts --network zkCandySepoliaTestnet ```
@@ -7,13 +31,6 @@
 # zkCandy deployment guide
 1. run the following command to deploy contract by specifying network 
 ```yarn hardhat clean && npx hardhat compile && npx hardhat deploy-zksync --network zkCandySepoliaTestnet --script deployCheckInAnnounce.ts --show-stack-traces```
-
-## Contract Address
-### Check In
-### Staging
-    6th Jan 2025:  0x8C6285D426f09C4211245D1F54e6eF54BE791DE0 (https://sepolia.explorer.zkcandy.io/address/0x8C6285D426f09C4211245D1F54e6eF54BE791DE0#contract)
-### Production testnet
-    6th Jan 2025: 0x44f5663030fE1b671fe540a2Ba5de309aae4b2AF (https://sepolia.explorer.zkcandy.io/address/0x44f5663030fE1b671fe540a2Ba5de309aae4b2AF#contract)
 
 
 ## hardhat console command
