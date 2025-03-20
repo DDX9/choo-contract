@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.24;
 
-// version:A4Prod
+// version:A5Stag
 contract CheckInAnnounce {
     event CheckIn(
         address indexed from,

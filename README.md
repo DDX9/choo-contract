@@ -17,6 +17,10 @@
 
 
 ## hardhat console command
+To interact with any given network run: 
+```
+yarn hardhat console --network XXXX
+```
 ### send transaction
 ```
 let signer = await ethers.getSigners()
